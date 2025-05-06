@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'RacingSansOne';
-    src: url('../Aset/fonts/RacingSansOne-Regular.ttf') format('truetype');
+    src: url('Aset/fonts/RacingSansOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'transformers';
-    src: url('../Aset/fonts/Transformers\ Movie.ttf') format('truetype');
+    src: url('Aset/fonts/Transformers\ Movie.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'lato';
-    src: url('../Aset/fonts/Lato-BoldItalic.ttf') format('truetype');
+    src: url('Aset/fonts/Lato-BoldItalic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

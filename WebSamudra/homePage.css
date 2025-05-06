@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'valorant';
-    src: url('../Aset/fonts/Valorant.ttf') format('truetype');
+    src: url('Aset/fonts/Valorant.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'RacingSansOne';
-    src: url('../Aset/fonts/RacingSansOne-Regular.ttf') format('truetype');
+    src: url('Aset/fonts/RacingSansOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'transformers';
-    src: url('../Aset/fonts/Transformers\ Movie.ttf') format('truetype');
+    src: url('Aset/fonts/Transformers\ Movie.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'lato';
-    src: url('../Aset/fonts/Lato-BoldItalic.ttf') format('truetype');
+    src: url('Aset/fonts/Lato-BoldItalic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -266,7 +266,7 @@
     height: 40rem;
     width: 100%;
     padding: 6rem;
-    background-image: url('../Aset/agents/agentnew/background-about.png');
+    background-image: url('Aset/agents/agentnew/background-about.png');
     background-size: cover;
     gap: 5rem;
 }
