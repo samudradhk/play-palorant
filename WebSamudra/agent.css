@@ -1,0 +1,404 @@
+@font-face {
+    font-family: 'valorant';
+    src: url('../Aset/fonts/Valorant.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RacingSansOne';
+    src: url('../Aset/fonts/RacingSansOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'transformers';
+    src: url('../Aset/fonts/Transformers\ Movie.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('../Aset/fonts/Lato-BoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: lato, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.galery{
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.gambar{
+    width: 350px;
+    border-radius: 15px;
+}
+.galeri .menu-card{
+    position:relative;
+    display: inline-block;
+}
+
+/* carousel */
+
+.carousel{
+    width: 100%;
+    height: 60vw;
+    overflow: hidden;
+    margin-top: 0;
+    position: relative;
+
+}
+
+.carousel .list .item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.carousel .list .item .content .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.carousel .list .item .content .title{
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 1.3em;
+}
+.carousel .list .item .content .topic{
+    font-weight: bold;
+    font-size: 6em;
+    line-height: 1.3em;
+    font-family: transformers, sans-serif;
+}
+
+.carousel .list .item .content .topic{
+    color: #25bd25;
+}
+.carousel .list .item .content .kekuatan{
+    width: 10%;
+    display: flex;
+    gap: 10px;
+    margin-top: 3rem;
+    transition: transform .5s ease-in;
+}
+
+/* thumbnail */  
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.thumbnail .item .content{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.thumbnail .item .content .title{
+    font-weight: bold;
+    color: white;
+}
+
+.thumbnail .item .content .des{
+    color: white;
+}
+
+/* arrow */
+
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 66.5%;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button{
+    width: 60px;
+    height: 60px; 
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    font-family: monospace;
+    color: #fff;
+    font-weight: bold;
+    font-size: large;
+    transition: .5s;
+    z-index: 100;
+}
+
+.arrows button:hover{
+    background-color: #eee;
+    color: #555;
+}
+
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .author,
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .topic,
+.carousel .list .item:nth-child(1) .des,
+.carousel .list .item:nth-child(1) .kekuatan{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent{
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.carousel .list .item:nth-child(1) .title{
+    animation-delay: 1.2s;
+}
+
+.carousel .list .item:nth-child(1) .topic{
+    animation-delay: 1.4s;
+}
+
+.carousel .list .item:nth-child(1) .des{
+    animation-delay: 1.6s;
+}
+
+.carousel .list .item:nth-child(1) .kekuatan{
+    animation-delay: 1.6s;
+}
+
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 20px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    width: 0;
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+@keyframes showThumbnail{
+    to{
+        width: 150px;
+    }
+}
+
+.carousel.next .thumbnail{
+    transform: translateX(150px);
+    animation: transformThumbnail .5s linear 1 forwards;
+}
+
+@keyframes transformThumbnail{
+    to{
+        transform: translateX(0);
+    }
+}
+
+/* prev efect */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 3;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outImage 0.5s linear 1 forwards;
+}
+@keyframes outImage{
+    to{
+        width: 150px;
+        height: 220px;
+        border-radius: 20px;
+        left: 50%;
+        bottom: 50px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.carousel.prev .list .item:nth-child(2) .author,
+.carousel.prev .list .item:nth-child(2) .title,
+.carousel.prev .list .item:nth-child(2) .topic,
+.carousel.prev .list .item:nth-child(2) .kekuatan,
+.carousel.prev .list .item:nth-child(2) .des{
+    animation: contentOut 0.5s linear 1 forwards;
+}
+
+@keyframes contentOut{
+    to{
+        opacity: 0;
+        filter: blur(20px);
+        transform: translateY(-150px);
+    }
+}
+
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+
+/* times */
+.time{
+    width: 0%;
+    height: 5px;
+    background-color: #f1683a;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    width: 100%;
+    animation: timeRunning 2s linear 1 forwards;
+}
+
+@keyframes timeRunning{
+    to{
+        width: 0;
+    }
+}
+@media screen and (max-width : 834px) {
+    .carousel{
+        height: 110vw;
+    }
+    .arrows{
+        top: 80%;
+        right: 60%;
+    }
+}
+@media screen and (max-width : 768px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .title{
+        font-size: 3em !important;
+    }
+    .carousel{
+        width: 100%;
+        height: 105vw;
+    }
+    .thumbnail .item .content .title{
+        font-size: 2.2em !important;
+    }
+    .thumbnail .item .content .des{
+        font-size: 1.5em;
+    }
+    .arrows{
+        top: 80%;
+        right: 60%;
+    }
+}
+
+@media screen and (max-width : 480px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .title{
+        font-size: 3em !important;
+    }
+    .carousel{
+        height: 200vw;
+    }
+    .thumbnail .item .content .title{
+        font-size: 1.6em !important;
+    }
+    .thumbnail .item .content .des{
+        font-size: 1em;
+    }
+    .kekuatan{
+        margin-top: 3px !important;
+    }
+    .thumbnail .item{
+        width: 90px;
+        height: 150px;
+    }
+    .arrows{
+        top: 85%;
+        right: 61%;
+    }
+}
+
+

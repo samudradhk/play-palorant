@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'valorant';
+    src: url('../Aset/fonts/Valorant.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RacingSansOne';
+    src: url('../Aset/fonts/RacingSansOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'transformers';
+    src: url('../Aset/fonts/Transformers\ Movie.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('../Aset/fonts/Lato-BoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,html{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: lato, sans-serif;
+}
+
+@media only screen and (max-width : 834px){
+    .about{
+        flex-wrap: wrap;
+        height: 39rem!important;
+        padding: 2rem!important;
+        gap: 1rem!important;
+    }
+    .about-image img{
+        height: 100%!important;
+        width: 100%;
+        justify-content: center!important;
+        align-items: center!important;
+    }
+    .h1{
+        font-size: 120px !important;
+    }
+}
+@media only screen and (max-width : 768px){
+    .h1{
+        font-size: 100px !important;
+    }
+    .hero h2{
+        font-size: 25px !important;
+    }
+    .best {
+        flex-wrap: wrap;
+
+    }
+    .best img{
+        width: 50%;
+    }
+    .best-desc{
+        padding: 2rem;
+    }
+    .about{
+        flex-wrap: wrap;
+        height: 55rem!important;
+    }
+    .about-bg{
+        width: 45rem!important;
+        height: 20rem!important;
+    }
+}
+
+@media only screen and (max-width : 480px){
+    .h1{
+        font-size: 60px !important;
+    }
+    .hero h2{
+        font-size: 25px !important;
+    }
+    .best {
+        flex-wrap: wrap;
+        padding: 2rem !important;
+    }
+    .best img{
+        width: 50%;
+    }
+    .about{
+        flex-wrap: wrap;
+        height: 39rem!important;
+        padding: 2rem!important;
+        gap: 1rem!important;
+    }
+    .about-image img{
+        height: 100%!important;
+        width: 100%;
+        justify-content: center!important;
+        align-items: center!important;
+    }
+    .des-best-about{
+        font-size: 1rem !important;
+    }
+}
+.h1{
+    font-family: 'valorant', sans-serif;
+    color : black;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 10rem;
+    text-align: center;
+    outline: 10px solit rgb(195, 143, 250);
+    /* -webkit-text-stroke: 0.00001px rgb(203, 113, 239); */
+    text-shadow: 0 0 10px rgba(61, 136, 100), 0 0 20px rgba(61, 136, 100), 0 0 30px rgba(61, 136, 100);
+}
+.section-content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
+.hero h2{
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    color: red;
+}
+.judul{
+    font-size: xx-large;
+    text-align: center;
+}
+
+.imga{
+    display:block;
+    width: 100%;
+}
+
+.hero{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+.hero a{
+    justify-content: center;
+}
+
+.best{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    background:linear-gradient(to bottom,rgba(61, 136, 100, 1), rgb(26, 43, 77, 1));
+    color: whitesmoke;
+    padding: 3rem;
+    gap: 2rem;
+}
+.h2{
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(61, 136, 100), 0 0 20px rgba(61, 136, 100), 0 0 30px rgba(61, 136, 100);
+    font-family: 'transformers', sans-serif;
+}
+.best-best-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.best-best-image .kekuatan{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 2rem;
+    margin: 1rem;
+}
+.best-best-image .kekuatan img{
+    width: 10%;
+    height: auto;
+}
+.best-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
+.best-desc{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 2rem;
+}
+.des-best-about{
+    font-size: 1.5rem;
+    text-align: justify;
+    color: whitesmoke;
+}
+.button-agent{
+    text-decoration: none;
+    --glow-color: rgba(176, 255, 200);
+    --glow-spread-color: rgba(123, 255, 168, 0.781);
+    --enhanced-glow-color: rgba(206, 255, 231);
+    --btn-cover: rgba(61, 136, 100);
+
+    border: 0.35em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-cover);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 0.75em 0.25em var(--glow-color);
+    text-shadow: 0 0 0.5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
+.button-agent::after{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: 0.7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+.button-agent:hover{
+    color: var(--btn-cover);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em 0.25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 0.75em 0.25 var(--glow-color);
+}
+
+.button-agent:active{
+    box-shadow: 0 0 0.6em 0.25 var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 0.5em 0.25em var(--glow-color);
+}
+.about{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40rem;
+    width: 100%;
+    padding: 6rem;
+    background-image: url('../Aset/agents/agentnew/background-about.png');
+    background-size: cover;
+    gap: 5rem;
+}
+
+.about-image img{
+    border-radius: 5%;
+    height: 17.5rem;
+}
+
+.about-desc{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 4vw;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 2vw;
+}
+.about-desc h2{
+    color: white;
+    text-shadow: 0 0 10px rgba(61, 136, 100), 0 0 20px rgba(61, 136, 100), 0 0 30px rgba(61, 136, 100);
+}
+
+

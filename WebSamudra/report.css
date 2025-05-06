@@ -1,0 +1,201 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vw;
+    background-image: url('../Aset/agents/agentnew/34.png');
+    background-size: cover;
+}
+
+.wrapper{
+    position: relative;
+    width: 50%;
+    height: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background: linear-gradient(90deg,black,blue); */
+    box-shadow: 0 0 50px aqua;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 4vw;
+}
+
+.form-wrapper{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form-wrapper h2{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.input-group{
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.input-group label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-group input{
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+
+.input-group input:focus~label,
+.input-group input:valid~label{
+    top: -5px;
+}
+
+.remember{
+    margin: -5px 0 25px 5px;
+}
+
+.remember label{
+    color: #fff;
+    font-size: 14px;
+}
+
+.remember label input{
+    accent-color: rgb(58, 248, 96);
+    
+}
+
+button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+
+    text-decoration: none;
+    --glow-color: rgba(176, 255, 200);
+    --glow-spread-color: rgba(123, 255, 168, 0.781);
+    --enhanced-glow-color: rgba(206, 255, 231);
+    --btn-cover: rgba(61, 136, 100);
+
+    border: 0.35em solid var(--glow-color);
+    color: var(--glow-color);
+    background-color: var(--btn-cover);
+    outline: none;
+    box-shadow: 0 0 1em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 0.75em 0.25em var(--glow-color);
+    text-shadow: 0 0 0.5em var(--glow-color);
+    transition: all 0.3s;
+}
+
+button::after{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: 0.7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+button:hover{
+    color: var(--btn-cover);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em 0.25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 0.75em 0.25 var(--glow-color);
+}
+
+button:active{
+    box-shadow: 0 0 0.6em 0.25 var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+/* .input-group select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+} 
+
+select:focus {
+    background-color: #444; 
+    border-color: #f0f0f0; 
+} */
+
+/* @media only screen and (max-width : 768px){
+    .wrapper{
+        width: 440px;
+        height: 80%;
+    }
+    .input-group input{
+        width: 100%;
+    }
+    button{
+        width: 100%;
+    }
+} */
+
+@media only screen and (max-width : 480px){
+    .wrapper{
+        width: 90%;
+        height: auto;
+        margin: 40px;
+    }
+}
+
+@media only screen and (max-width : 834px){
+    .main{
+        height: 100vh;
+    }
+    .wrapper{
+        width: 70%;
+        height: auto;
+        margin: 40px;
+    }
+}
